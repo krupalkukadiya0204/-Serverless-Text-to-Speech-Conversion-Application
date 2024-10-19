@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Speech Converter</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div id="content" class="card p-4 shadow-sm">
+            <h4 class="mb-3">Voice Selection</h4>
+            <div class="form-group">
+                <label for="voiceSelected">Choose Voice:</label>
+                <select id="voiceSelected" class="form-control">
+                    <option value="Joanna">Joanna [English]</option>
+                    <option value="Maja">Maja [Polish]</option>
+                    <option value="Enrique">Enrique [Spanish]</option>
+                    <option value="Marlene">Marlene [German]</option>
+                    <option value="Mathieu">Mathieu [French]</option>
+                    <option value="Cristiano">Cristiano [Portuguese]</option>
+                    <option value="Liv">Liv [Norwegian]</option>
+                    <option value="Mizuki">Mizuki [Japanese]</option>
+                    <option value="Carla">Carla [Italian]</option>
+                    <option value="Carmen">Carmen [Romanian]</option>
+                    <option value="Tatyana">Tatyana [Russian]</option>
+                    <option value="Astrid">Astrid [Swedish]</option>
+                    <option value="Filiz">Filiz [Turkish]</option>
+                    <option value="Gwyneth">Gwyneth [Welsh]</option>
+                    <option value="Karl">Karl [Icelandic]</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="postText">Enter Text:</label>
+                <textarea id="postText" class="form-control" rows="5"></textarea>
+                <small id="charCounter" class="form-text text-muted float-right">Characters: 0</small>
+            </div>
+            <button class="btn btn-primary btn-block" id="sayButton">Convert to Speech</button>
+            <p class="mt-3" id="postIDreturned"></p>
+        </div>
+        <div class="card mt-4 p-4 shadow-sm">
+            <h4 class="mb-3">Retrieve Audio by Post ID</h4>
+            <div class="input-group mb-3">
+                <input type="text" id="postId" class="form-control" placeholder="Enter Post ID">
+                <div class="input-group-append">
+                    <button class="btn btn-secondary" id="searchButton">Search</button>
+                </div>
+            </div>
+        </div>
+        <div class="card mt-4 p-4 shadow-sm">
+            <h4 class="mb-3">Audio Posts</h4>
+            <div class="table-responsive">
+                <table class="table table-bordered" id="posts">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Post ID</th>
+                            <th>Voice</th>
+                            <th>Text</th>
+                            <th>Status</th>
+                            <th>Player</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dynamic content will be added here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>
+
